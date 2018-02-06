@@ -24,4 +24,6 @@
 - name: Install ruby
   shell: ~/.rbenv/bin/rbenv install 2.3.6
   ignore_errors: true
-  become_user: donatas
+
+- name: Set global ruby version
+  shell: ~/.rbenv/bin/rbenv global 2.3.6
