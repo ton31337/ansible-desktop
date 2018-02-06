@@ -12,8 +12,7 @@ export LESS="-X"
 export LC_TIME="lt_LT.UTF-8"
 export LC_COLLATE="lt_LT.UTF-8"
 
-
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11:/home/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11:/home/bin:$HOME/.rbenv/bin"
 export LC_ALL="en_US.UTF-8"
 
 bindkey -e

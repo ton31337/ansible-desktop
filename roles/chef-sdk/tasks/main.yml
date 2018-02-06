@@ -1,0 +1,2 @@
+- name: Install ruby
+  shell: rbenv install 2.3.1

@@ -1,0 +1,20 @@
+- name: Clone rbenv
+  git:
+    repo: https://github.com/rbenv/rbenv.git
+    dest: ~/.rbenv
+
+- name: Compile rbenv
+  shell: cd ~/.rbenv && src/configure && make -C src
+
+- name: Create ~/.rbenv/plugins directory
+  file:
+    path: ~/.rbenv/plugins
+    state: directory
+
+- name: Install ruby-build
+  git:
+    repo: https://github.com/rbenv/ruby-build.git
+    dest: ~/.rbenv/plugins/ruby-build
+
+- name: Install ruby
+  shell: rbenv install 2.3.6

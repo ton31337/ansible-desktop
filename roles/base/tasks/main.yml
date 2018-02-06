@@ -8,7 +8,6 @@
   - curl
   - irssi
   - tmux
-  - rbenv
   - ruby-build
 
 - name: Change default shell

@@ -4,4 +4,4 @@
   roles:
     - base
     - git
-    - chef-sdk
+    - ruby
