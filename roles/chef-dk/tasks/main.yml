@@ -1,3 +1,11 @@
 - name: Download ChefDK
   apt:
     deb: https://packages.chef.io/files/stable/chefdk/2.4.17/ubuntu/16.04/chefdk_2.4.17-1_amd64.deb
+
+- name: Install Vagrant
+  apt:
+    deb: https://releases.hashicorp.com/vagrant/2.0.2/vagrant_2.0.2_x86_64.deb?_ga=2.247445252.1078146561.1517955298-1159370436.1517955298
+
+- name: Install Vbox
+  apt:
+    deb: https://download.virtualbox.org/virtualbox/5.2.6/virtualbox-5.2_5.2.6-120293~Ubuntu~xenial_amd64.deb
