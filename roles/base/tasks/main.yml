@@ -9,6 +9,7 @@
   - irssi
   - tmux
   - ruby-build
+  - cmake
 
 - name: Change default shell
   user:
