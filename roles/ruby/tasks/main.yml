@@ -2,19 +2,26 @@
   git:
     repo: https://github.com/rbenv/rbenv.git
     dest: ~/.rbenv
+  become_user: donatas
 
 - name: Compile rbenv
   shell: cd ~/.rbenv && src/configure && make -C src
+  become_user: donatas
 
 - name: Create ~/.rbenv/plugins directory
   file:
     path: ~/.rbenv/plugins
     state: directory
+    owner: donatas
+    group: donatas
 
 - name: Install ruby-build
   git:
     repo: https://github.com/rbenv/ruby-build.git
     dest: ~/.rbenv/plugins/ruby-build
+  become_user: donatas
 
 - name: Install ruby
   shell: ~/.rbenv/bin/rbenv install 2.3.6
+  ignore_errors: true
+  become_user: donatas
