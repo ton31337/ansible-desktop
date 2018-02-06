@@ -17,4 +17,4 @@
     dest: ~/.rbenv/plugins/ruby-build
 
 - name: Install ruby
-  shell: rbenv install 2.3.6
+  shell: ~/.rbenv/bin/rbenv install 2.3.6
