@@ -1,0 +1,71 @@
+HISTFILE=~/.histfile
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
+setopt extendedhistory
+unsetopt promptcr
+
+export PAGER=less
+export EDITOR="vim"
+export VISUAL="vim"
+export LESS="-X"
+export LC_TIME="lt_LT.UTF-8"
+export LC_COLLATE="lt_LT.UTF-8"
+
+
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11:/home/bin"
+export LC_ALL="en_US.UTF-8"
+
+bindkey -e
+
+bindkey "^[OA" up-line-or-search
+bindkey "^[OB" down-line-or-search
+
+bindkey "^[OA" history-beginning-search-backward
+bindkey "^[OB" history-beginning-search-forward
+
+setopt auto_pushd
+DIRSTACKSIZE=50
+
+alias ping='ping -n '
+
+PS1="%B[%T]%b %U%M%u %n %d
+%# "
+
+setopt extendedglob
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z} m:[-._]=[-._] r:|[-./_]=** r:|=*' '+l:|=*' #csh “set complete=enhance”
+
+#title stuff
+function title {
+  if [[ $TERM == "screen" ]]; then
+    # Use these two for GNU Screen:
+    print -nR $'\033k'$1$'\033'\\\
+
+    print -nR $'\033]0;'$2$'\a'
+  elif [[ $TERM == "xterm" || $TERM == "rxvt" ]]; then
+    # Use this one instead for XTerms:
+    print -nR $'\033]0;'$*$'\a'
+  fi
+}
+
+function precmd {
+  title zsh "$PWD"
+}
+
+function preexec {
+  emulate -L zsh
+  local -a cmd; cmd=(${(z)1})
+  title $cmd[1]:t "$cmd[2,-1]"
+}
+
+if [[ -r /etc/zsh_command_not_found ]]; then
+  . /etc/zsh_command_not_found
+fi
+
+# git stuff (show branch)
+zstyle ':vcs_info:git*' formats "%r/%S [%b] (%a) %m%u%c"
+autoload -Uz vcs_info
+precmd () { vcs_info }
+setopt prompt_subst
+PS1="\$vcs_info_msg_0_$PS1"
+

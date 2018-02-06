@@ -1,0 +1,25 @@
+- name: Install basic tools
+  apt:
+    name: "{{ item }}"
+  with_items:
+  - zsh
+  - git
+  - vim
+  - curl
+  - irssi
+  - tmux
+
+- name: Change default shell
+  user:
+    name: donatas
+    shell: /bin/zsh
+
+- name: Configure zsh
+  copy:
+    src: zshrc
+    dest: ~/.zshrc
+
+- name: Configure vim
+  copy:
+    src: vimrc
+    dest: ~/.vimrc
