@@ -25,6 +25,7 @@ map <C-n> :tabnew<CR>
 map <C-e> :edit
 map <TAB> :tabnext<CR>
 map <S-TAB> :tabprevious<CR>
+map <leader>s :set list!
 
 set list
 set listchars=space:·
