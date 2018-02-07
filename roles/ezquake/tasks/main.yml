@@ -10,7 +10,7 @@
     chdir: ~/.ezquake
     creates: ~/.ezquake/ezquake-linux-x86_64
 
-- name: Create ezquake directories
+- name: Create qw directories
   file:
     path: "~/games/ezquake/{{ item }}"
     state: directory
@@ -31,6 +31,11 @@
   copy:
     src: ton.cfg
     dest: ~/games/ezquake/ezquake/ton.cfg
+
+- name: Copy ezquake huds, textures, etc
+  copy:
+    src: ezquake
+    dest: ~/games/ezquake
 
 - name: Copy executable
   copy:
