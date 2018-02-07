@@ -53,3 +53,8 @@
   copy:
     src: vimrc
     dest: ~/.vimrc
+
+- name: Configure tmux
+  copy:
+    src: tmux.conf
+    dest: ~/.tmux.conf
