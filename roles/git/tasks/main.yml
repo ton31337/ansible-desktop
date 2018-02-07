@@ -15,3 +15,9 @@
     name: core.editor
     scope: global
     value: vim
+
+- name: Avoid ESC[ crap
+  git_config:
+    name: core.pager
+    scope: global
+    value: less -r
