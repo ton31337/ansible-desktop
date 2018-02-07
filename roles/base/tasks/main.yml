@@ -19,6 +19,7 @@
   - libexpat1-dev
   - libspeex-dev
   - libspeexdsp-dev
+  - wine
 
 - name: Change default shell
   user:
