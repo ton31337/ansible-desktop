@@ -1,0 +1,38 @@
+- name: Download ezQuake
+  git:
+    repo: https://github.com/ezQuake/ezquake-source.git
+    dest: ~/.ezquake
+  became_user: donatas
+
+- name: Compile ezQuake
+  shell: make -j4
+  args:
+    chdir: ~/.ezquake
+    creates: ~/.ezquake/ezquake-linux-x86_64
+
+- name: Create ezquake directories
+  file:
+    path: "~/games/ezquake/{{ item }}"
+    state: directory
+    recurse: true
+  with_items:
+    - id1
+    - ezquake
+
+- name: Copy paks
+  copy:
+    src: "{{ item }}"
+    dest: "~/games/ezquake/id1/{{ item }}"
+  with_items:
+    - pak0.pak
+    - pak1.pak
+
+- name: Copy config
+  copy:
+    src: ton.cfg
+    dest: ~/games/ezquake/ezquake/ton.cfg
+
+- name: Copy executable
+  copy:
+    src: ~/.ezquake/ezquake-linux-x86_64
+    dest: ~/games/ezquake/ezquake-linux-x86_64

@@ -4,5 +4,6 @@
   roles:
     - base
     - git
-    - ruby
-    - chef-dk
+#    - ruby
+#    - chef-dk
+    - ezquake

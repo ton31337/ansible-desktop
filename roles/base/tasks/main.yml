@@ -10,6 +10,15 @@
   - tmux
   - ruby-build
   - cmake
+  - build-essential
+  - libcurl4-openssl-dev
+  - libjansson-dev
+  - libsdl2-dev
+  - libpng-dev
+  - libjpeg-dev
+  - libexpat1-dev
+  - libspeex-dev
+  - libspeexdsp-dev
 
 - name: Change default shell
   user:
