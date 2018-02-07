@@ -26,7 +26,7 @@
   - wine
   - network-manager-l2tp
   - network-manager-l2tp-gnome
-  - openvpn
+  - network-manager-openvpn
 
 - name: Change default shell
   user:
