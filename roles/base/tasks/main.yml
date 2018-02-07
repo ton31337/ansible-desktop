@@ -1,3 +1,7 @@
+- name: Add l2tp repo
+  apt_repository:
+    repo: 'ppa:nm-l2tp/network-manager-l2tp'
+
 - name: Install basic tools
   apt:
     name: "{{ item }}"
@@ -20,6 +24,8 @@
   - libspeex-dev
   - libspeexdsp-dev
   - wine
+  - network-manager-l2tp
+  - network-manager-l2tp-gnome
 
 - name: Change default shell
   user:
