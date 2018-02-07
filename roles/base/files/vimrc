@@ -13,16 +13,13 @@ set incsearch
 syn on
 set vb
 set wildmenu
-colorscheme evening
+colorscheme dracula
 set textwidth=0
 set encoding=utf-8
 set expandtab
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
-
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
 
 map <C-n> :tabnew<CR>
 map <C-e> :edit
