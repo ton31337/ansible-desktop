@@ -27,6 +27,7 @@
   - network-manager-l2tp
   - network-manager-l2tp-gnome
   - network-manager-openvpn
+  - network-manager-openvpn-gnome
 
 - name: Change default shell
   user:
