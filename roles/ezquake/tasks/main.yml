@@ -32,10 +32,13 @@
     src: ton.cfg
     dest: ~/games/ezquake/ezquake/ton.cfg
 
-- name: Copy ezquake huds, textures, etc
+- name: Copy ezquake huds, textures, skins
   copy:
-    src: ezquake
+    src: "{{ item }}"
     dest: ~/games/ezquake
+  with_items:
+    - ezquake
+    - qw
 
 - name: Copy executable
   copy:
