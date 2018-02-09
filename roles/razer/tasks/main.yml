@@ -1,0 +1,11 @@
+- name: Add razer repo
+  apt_repository:
+    repo: 'ppa:nilarimogard/webupd8'
+
+- name: Install razer tools
+  apt:
+    name: "{{ item }}"
+  with_items:
+    - razercfg
+    - qrazercfg
+    - qrazercfg-applet
