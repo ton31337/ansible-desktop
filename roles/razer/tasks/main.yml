@@ -9,3 +9,9 @@
     - razercfg
     - qrazercfg
     - qrazercfg-applet
+
+- name: Make sure razerd service is started and enabled
+  service:
+    name: razerd
+    enabled: yes
+    state: started
