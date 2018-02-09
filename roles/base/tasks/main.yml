@@ -31,6 +31,9 @@
   - gnome-control-center
   - gnome-online-accounts
   - quake2
+  - autoconf
+  - autogen
+  - libtool
 
 - name: Change default shell
   user:
