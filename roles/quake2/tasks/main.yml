@@ -1,0 +1,4 @@
+- name: Copy baseq2
+  copy:
+    src: baseq2
+    dest: ~/.yq2

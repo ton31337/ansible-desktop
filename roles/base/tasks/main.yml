@@ -30,6 +30,7 @@
   - network-manager-openvpn-gnome
   - gnome-control-center
   - gnome-online-accounts
+  - quake2
 
 - name: Change default shell
   user:
