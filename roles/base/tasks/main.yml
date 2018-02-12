@@ -35,6 +35,7 @@
   - autogen
   - libtool
   - ipcalc
+  - pwgen
 
 - name: Change default shell
   user:
