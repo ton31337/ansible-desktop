@@ -36,6 +36,7 @@
   - libtool
   - ipcalc
   - pwgen
+  - whois
 
 - name: Change default shell
   user:
