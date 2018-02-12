@@ -16,6 +16,12 @@
     scope: global
     value: vim
 
+- name: Push current branch by default
+  git_config:
+    name: push.default
+    scope: global
+    value: current
+
 - name: Avoid ESC[ crap
   git_config:
     name: core.pager
