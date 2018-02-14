@@ -6,6 +6,14 @@
   apt:
     name: openrazer-meta
 
+- name: Add polychromatic repo
+  apt_repository:
+    repo: 'ppa:polychromatic/stable'
+
+- name: Install polychromatic
+  apt:
+    name: polychromatic
+
 - name: Add razer repo
   apt_repository:
     repo: 'ppa:nilarimogard/webupd8'
