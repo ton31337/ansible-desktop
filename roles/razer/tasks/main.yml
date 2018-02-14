@@ -1,3 +1,11 @@
+- name: Install official OpenRazer driver
+  apt_repository:
+    repo: 'ppa:openrazer/stable'
+
+- name: Install openrazer-meta
+  apt:
+    name: openrazer-meta
+
 - name: Add razer repo
   apt_repository:
     repo: 'ppa:nilarimogard/webupd8'
