@@ -76,3 +76,11 @@
 - name: Install google-drive-ocamlfuse
   apt:
     name: google-drive-ocamlfuse
+
+- name: Add spotify repo
+  apt_repository:
+    repo: 'deb http://repository.spotify.com stable non-free'
+
+- name: Install spotify-client
+  apt:
+    name: spotify-client
