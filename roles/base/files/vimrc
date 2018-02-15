@@ -27,5 +27,4 @@ map <TAB> :tabnext<CR>
 map <S-TAB> :tabprevious<CR>
 map <leader>s :set list!
 
-set list
 set listchars=space:·
