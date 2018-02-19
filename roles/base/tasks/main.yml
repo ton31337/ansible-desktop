@@ -37,6 +37,7 @@
   - ipcalc
   - pwgen
   - whois
+  - traceroute
 
 - name: Change default shell
   user:
