@@ -38,6 +38,7 @@
   - pwgen
   - whois
   - traceroute
+  - python-netaddr
 
 - name: Change default shell
   user:
