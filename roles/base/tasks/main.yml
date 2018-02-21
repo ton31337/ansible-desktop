@@ -39,6 +39,7 @@
   - whois
   - traceroute
   - python-netaddr
+  - nghttp2-client
 
 - name: Change default shell
   user:
