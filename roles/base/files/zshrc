@@ -27,6 +27,7 @@ setopt auto_pushd
 DIRSTACKSIZE=50
 
 alias ping='ping -n '
+alias ansible-knife='ruby ~/hostinger/ansible-repo/ansible_search.rb -i ~/hostinger/ansible-repo/hosts'
 
 PS1="%B[%T]%b %U%M%u %n %d
 %# "
