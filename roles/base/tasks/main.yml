@@ -40,6 +40,7 @@
   - traceroute
   - python-netaddr
   - nghttp2-client
+  - golang-go
 
 - name: Install shodan cli
   pip:
