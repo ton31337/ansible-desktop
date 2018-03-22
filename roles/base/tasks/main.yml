@@ -41,6 +41,7 @@
   - python-netaddr
   - nghttp2-client
   - golang-go
+  - golang-golang-x-tools
 
 - name: Install shodan cli
   pip:
