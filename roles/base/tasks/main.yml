@@ -43,6 +43,7 @@
   - golang-go
   - golang-golang-x-tools
   - nmap
+  - pavucontrol
 
 - name: Install shodan cli
   pip:
