@@ -45,6 +45,9 @@
   - nmap
   - pavucontrol
   - minicom
+  - xinetd
+  - tftp
+  - tftpd
 
 - name: Install shodan cli
   pip:
