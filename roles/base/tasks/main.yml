@@ -44,6 +44,7 @@
   - golang-golang-x-tools
   - nmap
   - pavucontrol
+  - minicom
 
 - name: Install shodan cli
   pip:
