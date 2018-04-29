@@ -48,6 +48,7 @@
   - xinetd
   - tftp
   - tftpd
+  - gimp
 
 - name: Install shodan cli
   pip:
