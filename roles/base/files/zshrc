@@ -69,3 +69,5 @@ precmd () { vcs_info }
 setopt prompt_subst
 PS1="\$vcs_info_msg_0_$PS1"
 
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
