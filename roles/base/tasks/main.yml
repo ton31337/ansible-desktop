@@ -49,6 +49,7 @@
   - tftp
   - tftpd
   - gimp
+  - graphviz
 
 - name: Install shodan cli
   pip:
