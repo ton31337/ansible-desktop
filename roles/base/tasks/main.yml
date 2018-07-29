@@ -51,6 +51,7 @@
   - gimp
   - graphviz
   - tig
+  - pv
 
 - name: Install shodan cli
   pip:
