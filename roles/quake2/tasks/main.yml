@@ -1,4 +1,31 @@
+- name: Download q2pro
+  git:
+    repo: https://github.com/skullernet/q2pro.git
+    dest: ~/.q2pro
+  became_user: donatas
+
+- name: Compile q2pro
+  shell: make
+  args:
+    chdir: ~/.q2pro
+    creates: ~/.q2pro/q2pro
+
+- name: Create /home/donatas/games/q2pro directory
+  file:
+    state: directory
+    path: /home/donatas/games/q2pro
+    recurse: true
+  became_user: donatas
+
+- name: Copy q2pro executable
+  copy:
+    src: ~/.q2pro/q2pro
+    dest: /home/donatas/games/q2pro
+    mode: 0755
+  became_user: donatas
+
 - name: Copy baseq2
   copy:
     src: baseq2
-    dest: /usr/share/games/quake2
+    dest: /home/donatas/games/q2pro
+  became_user: donatas
