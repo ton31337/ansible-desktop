@@ -29,3 +29,15 @@
     src: baseq2
     dest: /home/donatas/games/q2pro
   became_user: donatas
+
+- name: Copy q2pro.menu
+  copy:
+    src: ~/.q2pro/src/client/ui/q2pro.menu
+    dest: /home/donatas/games/q2pro/baseq2
+  became_user: donatas
+
+- name: Copy gamex86_64.so
+  copy:
+    src: ~/.q2pro/gamex86_64.so
+    dest: /home/donatas/games/q2pro/baseq2
+  became_user: donatas
