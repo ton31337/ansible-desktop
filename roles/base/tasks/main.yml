@@ -51,6 +51,7 @@
   - graphviz
   - tig
   - pv
+  - icedtea-netx
 
 - name: Install shodan cli
   pip:
