@@ -89,7 +89,7 @@
     src: tmux.conf
     dest: ~/.tmux.conf
     
-- name: Set default sheel to /bin/zsh
+- name: Set default shell to /bin/zsh
   user:
     name: donatas
     shell: /bin/zsh
