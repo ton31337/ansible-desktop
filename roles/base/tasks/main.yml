@@ -89,14 +89,6 @@
     src: tmux.conf
     dest: ~/.tmux.conf
 
-- name: Add repo for Gdrive
-  apt_repository:
-    repo: 'ppa:alessandro-strada/ppa'
-
-- name: Install google-drive-ocamlfuse
-  apt:
-    name: google-drive-ocamlfuse
-
 - name: Add spotify repo
   apt_repository:
     repo: 'deb http://repository.spotify.com stable non-free'
