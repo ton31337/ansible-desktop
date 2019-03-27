@@ -23,7 +23,7 @@
   - libexpat1-dev
   - libspeex-dev
   - libspeexdsp-dev
-  - wine
+  - wine-stable
   - network-manager-l2tp
   - network-manager-l2tp-gnome
   - network-manager-openvpn
