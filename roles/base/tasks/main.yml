@@ -88,11 +88,3 @@
   copy:
     src: tmux.conf
     dest: ~/.tmux.conf
-
-- name: Add spotify repo
-  apt_repository:
-    repo: 'deb http://repository.spotify.com stable non-free'
-
-- name: Install spotify-client
-  apt:
-    name: spotify-client
