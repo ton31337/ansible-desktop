@@ -6,6 +6,7 @@
   apt:
     name: "{{ item }}"
   with_items:
+  - python-pip
   - zsh
   - git
   - vim
@@ -23,7 +24,7 @@
   - libexpat1-dev
   - libspeex-dev
   - libspeexdsp-dev
-  - wine
+  - wine-stable
   - network-manager-l2tp
   - network-manager-l2tp-gnome
   - network-manager-openvpn
@@ -87,19 +88,8 @@
   copy:
     src: tmux.conf
     dest: ~/.tmux.conf
-
-- name: Add repo for Gdrive
-  apt_repository:
-    repo: 'ppa:alessandro-strada/ppa'
-
-- name: Install google-drive-ocamlfuse
-  apt:
-    name: google-drive-ocamlfuse
-
-- name: Add spotify repo
-  apt_repository:
-    repo: 'deb http://repository.spotify.com stable non-free'
-
-- name: Install spotify-client
-  apt:
-    name: spotify-client
+    
+- name: Set default shell to /bin/zsh
+  user:
+    name: donatas
+    shell: /bin/zsh
