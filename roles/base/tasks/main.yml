@@ -53,6 +53,7 @@
   - tig
   - pv
   - icedtea-netx
+  - tilix
 
 - name: Install shodan cli
   pip:
