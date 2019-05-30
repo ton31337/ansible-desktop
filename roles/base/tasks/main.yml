@@ -88,8 +88,16 @@
   copy:
     src: tmux.conf
     dest: ~/.tmux.conf
-    
+
 - name: Set default shell to /bin/zsh
   user:
     name: donatas
     shell: /bin/zsh
+
+- name: Copy tilix.dconf
+  copy:
+    src: tilix.dconf
+	dest: ~/.tilix.dconf
+
+- name: Load tilix.dconf
+  shell: dconf load /com/gexperts/Tilix/ < ~/.tilix.dconf
