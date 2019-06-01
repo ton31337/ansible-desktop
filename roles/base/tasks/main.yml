@@ -98,7 +98,7 @@
 - name: Copy tilix.dconf
   copy:
     src: tilix.dconf
-	dest: ~/.tilix.dconf
+    dest: ~/.tilix.dconf
 
 - name: Load tilix.dconf
   shell: dconf load /com/gexperts/Tilix/ < ~/.tilix.dconf
