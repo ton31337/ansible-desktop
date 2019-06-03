@@ -54,6 +54,7 @@
   - pv
   - icedtea-netx
   - tilix
+  - clang-format-3.9
 
 - name: Install shodan cli
   pip:
@@ -102,3 +103,8 @@
 
 - name: Load tilix.dconf
   shell: dconf load /com/gexperts/Tilix/ < ~/.tilix.dconf
+
+- name: Copy Visual Studio Code settings
+  copy:
+    src: settings.json
+    dest: ~/.config/Code/User/settings.json

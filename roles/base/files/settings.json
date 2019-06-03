@@ -1,0 +1,11 @@
+{
+    "files.trimTrailingWhitespace": true,
+    "editor.renderWhitespace": "all",
+    "files.insertFinalNewline": true,
+    "window.zoomLevel": 1,
+    "editor.formatOnPaste": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.formatOnSave": false,
+    "clang-format.executable": "/usr/bin/clang-format-3.9",
+    "files.autoSave": "afterDelay"
+}
