@@ -55,6 +55,7 @@
   - icedtea-netx
   - tilix
   - clang-format-3.9
+  - xml2rfc
 
 - name: Install shodan cli
   pip:
