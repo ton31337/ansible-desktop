@@ -13,13 +13,15 @@ set incsearch
 syn on
 set vb
 set wildmenu
+set number
 colorscheme dracula
 set textwidth=0
 set encoding=utf-8
-set expandtab
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
+syntax on
+set term=xterm-256color
 
 map <C-n> :tabnew<CR>
 map <C-e> :edit
@@ -28,3 +30,9 @@ map <S-TAB> :tabprevious<CR>
 map <leader>s :set list!
 
 set listchars=space:·
+
+let &colorcolumn=join(range(80,80),",")
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+
+set ai
