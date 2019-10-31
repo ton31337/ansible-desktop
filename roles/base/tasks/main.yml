@@ -56,6 +56,7 @@
   - tilix
   - clang-format-3.9
   - xml2rfc
+  - devscripts
 
 - name: Install shodan cli
   pip:
