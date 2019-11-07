@@ -1,7 +1,8 @@
 set nocompatible
+set wrap linebreak nolist
+set formatoptions+=t
 set ruler
 set backspace=indent,eol,start
-set nowrap
 set autoindent
 set showmode
 set viminfo='20,\"50
@@ -14,8 +15,9 @@ syn on
 set vb
 set wildmenu
 set number
+set paste
 colorscheme dracula
-set textwidth=0
+set textwidth=80
 set encoding=utf-8
 set shiftwidth=4
 set softtabstop=4
