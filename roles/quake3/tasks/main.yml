@@ -1,0 +1,10 @@
+- name: Create q3 directory
+  file:
+    path: /home/donatas/games/q3
+    state: directory
+
+- name: Download ioquake3
+  get_url:
+    url: https://ioquake3.org/files/1.36/installer/ioquake3-1.36-7.1.x86_64.run
+    dest: /home/donatas/games/q3/ioquake3.run
+    mode: 0755
