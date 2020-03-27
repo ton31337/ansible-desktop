@@ -58,6 +58,8 @@
   - xml2rfc
   - devscripts
   - virtualbox
+  - libreadline-dev
+  - texinfo
 
 - name: Install shodan cli
   pip:
