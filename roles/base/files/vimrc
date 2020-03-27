@@ -16,7 +16,6 @@ set vb
 set wildmenu
 set number
 set paste
-colorscheme dracula
 set textwidth=80
 set encoding=utf-8
 set shiftwidth=4
