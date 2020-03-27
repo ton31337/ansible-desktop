@@ -5,7 +5,3 @@
 - name: Install Vagrant
   apt:
     deb: https://releases.hashicorp.com/vagrant/2.0.2/vagrant_2.0.2_x86_64.deb?_ga=2.247445252.1078146561.1517955298-1159370436.1517955298
-
-- name: Install Vbox
-  apt:
-    name: https://download.virtualbox.org/virtualbox/6.1.4/virtualbox-6.1_6.1.4-136177~Ubuntu~bionic_amd64.deb

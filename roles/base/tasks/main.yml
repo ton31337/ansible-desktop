@@ -57,6 +57,7 @@
   - clang-format-3.9
   - xml2rfc
   - devscripts
+  - virtualbox
 
 - name: Install shodan cli
   pip:
