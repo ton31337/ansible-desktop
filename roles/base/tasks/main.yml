@@ -61,6 +61,21 @@
   - libreadline-dev
   - texinfo
 
+- name: Install discord
+  snap:
+    name: discord
+    classic: yes
+
+- name: Install slack
+  snap:
+    name: slack
+    classic: yes
+
+- name: Install skype
+  snap:
+    name: skype
+    classic: yes
+
 - name: Install shodan cli
   pip:
     name: shodan
