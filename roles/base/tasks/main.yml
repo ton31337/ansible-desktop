@@ -76,6 +76,10 @@
     name: skype
     classic: yes
 
+- name: Install Remmina RDP client
+  snap:
+    name: remmina
+
 - name: Install shodan cli
   pip:
     name: shodan
