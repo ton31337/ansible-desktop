@@ -60,6 +60,7 @@
   - virtualbox
   - libreadline-dev
   - texinfo
+  - coccinelle
 
 - name: Install discord
   snap:
