@@ -60,6 +60,26 @@
   - virtualbox
   - libreadline-dev
   - texinfo
+  - coccinelle
+
+- name: Install discord
+  snap:
+    name: discord
+    classic: yes
+
+- name: Install slack
+  snap:
+    name: slack
+    classic: yes
+
+- name: Install skype
+  snap:
+    name: skype
+    classic: yes
+
+- name: Install Remmina RDP client
+  snap:
+    name: remmina
 
 - name: Install shodan cli
   pip:
@@ -74,17 +94,6 @@
   copy:
     src: zshrc
     dest: ~/.zshrc
-
-- name: Create ~/.vim/colors directory
-  file:
-    path: ~/.vim/colors
-    state: directory
-    recurse: true
-
-- name: Download dracula theme
-  get_url:
-    url: https://raw.githubusercontent.com/dracula/vim/master/colors/dracula.vim
-    dest: ~/.vim/colors/dracula.vim
 
 - name: Configure vim
   copy:
