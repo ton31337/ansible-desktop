@@ -1,0 +1,4 @@
+- name: Clone https://github.com/ton31337/tmdrv
+  git:
+    repo: https://github.com/ton31337/tmdrv
+    dest: ~/projects
