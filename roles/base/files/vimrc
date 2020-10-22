@@ -25,3 +25,6 @@ syntax on
 set term=xterm-256color
 set listchars=space:·,eol:$,tab:>-,trail:~,extends:>,precedes:<
 let &colorcolumn=join(range(80,80),",")
+map <C-n> :tabnew<CR>
+map <TAB> :tabnext<CR>
+map <S-TAB> :tabprevious<CR>
