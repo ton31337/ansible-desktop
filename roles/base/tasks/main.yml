@@ -6,6 +6,7 @@
   apt:
     name: "{{ item }}"
   with_items:
+  - guake
   - python-pip
   - zsh
   - git
@@ -99,6 +100,11 @@
   copy:
     src: vimrc
     dest: ~/.vimrc
+
+- name: Configure Guake
+  copy:
+    src: guake_preferences
+    dest: ~/.guake
 
 - name: Configure tmux
   copy:
