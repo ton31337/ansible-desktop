@@ -32,6 +32,7 @@ show-hide='F12'
 [keybindings/local]
 clipboard-copy='<Alt>c'
 clipboard-paste='<Alt>v'
+new-tab='<Primary>t'
 split-tab-horizontal='<Shift><Alt>d'
 split-tab-vertical='<Shift><Alt>r'
 switch-tab1='<Alt>1'

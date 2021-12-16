@@ -1,3 +1,8 @@
+- name: Create ~/projects
+  file:
+    path: ~/projects
+    state: directory
+
 - name: Set email
   git_config:
     name: user.email

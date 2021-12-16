@@ -3,6 +3,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
 setopt extendedhistory
+setopt print_exit_value
 unsetopt promptcr
 
 export PAGER=less
@@ -11,6 +12,25 @@ export VISUAL="vim"
 export LESS="-X"
 export LC_TIME="lt_LT.UTF-8"
 export LC_COLLATE="lt_LT.UTF-8"
+
+#export IGNOREEOF=0
+
+# bash like ctrl-d wrapper for IGNOREEOF
+setopt ignore_eof
+function bash-ctrl-d() {
+  if [[ $CURSOR == 0 && -z $BUFFER ]]
+  then
+    [[ -z $IGNOREEOF || $IGNOREEOF == 0 ]] && exit
+    if [[ "$LASTWIDGET" == "bash-ctrl-d" ]]
+    then
+      (( --__BASH_IGNORE_EOF <= 0 )) && exit
+    else
+      (( __BASH_IGNORE_EOF = IGNOREEOF ))
+    fi
+  fi
+}
+zle -N bash-ctrl-d
+bindkey "^d" bash-ctrl-d
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11:/home/bin:$HOME/.rbenv/bin:$HOME/.rbenv/shims"
 export LC_ALL="en_US.UTF-8"
