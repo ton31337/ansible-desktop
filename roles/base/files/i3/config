@@ -50,6 +50,8 @@ exec --no-startup-id /usr/bin/guake
 # Background
 exec --no-startup-id /usr/bin/feh --bg-fill ~/.config/i3/img/bg.jpg
 exec --no-startup-id /usr/bin/xcompmgr -c -f -n
+# CPU powersave
+exec --no-startup-id cpupower frequency-set --governor powersave
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
