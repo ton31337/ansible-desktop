@@ -6,6 +6,7 @@
   apt:
     name: "{{ item }}"
   with_items:
+  - i3
   - guake
   - python-pip
   - zsh
