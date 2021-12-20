@@ -41,7 +41,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # Change resolution
-exec --no-startup-id xrandr --output eDP-1-1 --mode 1920x1080
+exec --no-startup-id xrandr --output DP-2 --mode 2560x1440 --rate 144.00
+exec --no-startup-id xrandr --output DP-4 --mode 1920x1080 --rate 144.00
 # Natural scroll
 exec --no-startup-id ~/.config/i3/bin/natural-scroll.sh
 # Guake console
