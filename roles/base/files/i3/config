@@ -202,4 +202,5 @@ assign [class="Firefox"] $ws2
 assign [class="Slack"] $ws3
 assign [class="discord"] $ws3
 assign [class="Code"] $ws4
-exec --no-startup-id i3-msg "exec tilix; exec firefox; exec slack; exec discord; exec code;"
+assign [class="nvim-qt"] $ws4
+exec --no-startup-id i3-msg "exec tilix; exec firefox; exec slack; exec discord; exec nvim-qt;"
