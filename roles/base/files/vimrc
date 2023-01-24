@@ -28,4 +28,7 @@ let &colorcolumn=join(range(80,80),",")
 map <C-n> :tabnew<CR>
 map <TAB> :tabnext<CR>
 map <S-TAB> :tabprevious<CR>
-autocmd BufWritePre * %s/\s\+$//e
+"autocmd BufWritePre * %s/\s\+$//e
+set clipboard=unnamed
+autocmd FileType c,cpp setlocal equalprg=clang-format
+set spell
