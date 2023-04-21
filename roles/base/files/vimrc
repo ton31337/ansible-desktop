@@ -5,6 +5,7 @@ set ruler
 set backspace=indent,eol,start
 set autoindent
 set showmode
+set guifont=Monospace\ 16
 set viminfo='20,\"50
 set autowrite
 set showmatch
