@@ -36,4 +36,131 @@ set spell
 
 call plug#begin()
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'zivyangll/git-blame.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'joshdick/onedark.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-fugitive'
+Plug 'preservim/nerdtree'
+Plug 'Yggdroot/indentLine'
 call plug#end()
+
+let g:lightline = {
+\   'colorscheme': 'onedark',
+\   'active': {
+\     'left':[ [ 'mode', 'paste' ],
+\              [ 'gitbranch', 'readonly', 'filename', 'modified' ]
+\     ],
+\     'right': [['lineinfo'], ['percent'], ['fileformat', 'fileencoding', 'filetype']]
+\   },
+\   'component': {
+\     'lineinfo': '%3l:%-2v'
+\   },
+\   'component_function': {
+\     'gitbranch': 'fugitive#head',
+\   }
+\ }
+let g:lightline.separator = {
+\   'left': "\ue0b0", 'right': "\ue0b2"
+\}
+let g:lightline.subseparator = g:lightline.separator
+
+let g:lightline.tabline = {
+\   'left': [ ['tabs'] ],
+\   'right': [ ['close'] ]
+\ }
+
+" 'cocstatus',
+" \     'cocstatus': 'coc#status',
+
+" Colour scheme
+syntax on
+colorscheme onedark
+
+highlight CursorLine ctermbg=234
+highlight CursorLineNr ctermfg=39 ctermbg=234
+highlight LineNr ctermbg=234
+highlight SyntasticWarningSign ctermfg=173
+
+" Indent lines
+let g:indentLine_setColors = 1
+let g:indentLine_color_term=239
+let g:indentLine_char = '▏'
+let g:indentLine_concealcursor = ''
+
+" Some lightline options
+set showtabline=2  " Show tabline
+set guioptions-=e  " Don't use GUI tabline
+set laststatus=2
+set noshowmode
+
+set signcolumn=yes
+
+" Toggle relative line numbers with the current line displayed absolutely
+set number relativenumber
+
+" Highlight current line
+set cursorline
+
+" rust.vim
+filetype plugin indent on
+
+set completeopt-=preview
+let g:float_preview#docked = 0
+
+" Press Tab to scroll _down_ a list of auto-completions
+let g:SuperTabDefaultCompletionType = "<c-n>"
+
+" Autopairs
+let g:AutoPairsShortcutFastWrap = '<C-e>'
+let g:AutoPairsShortcutBackInsert = '<C-b>'
+let g:AutoPairsFlyMode = 0
+
+" NERDTree
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+let g:NERDTreeWinPos = "right"
+let NERDTreeCustomOpenArgs = {'file':{'where':'t'}}
+
+" Other Keybindings
+nnoremap <Leader>b :<C-u>call gitblame#echo()<CR>
+nnoremap <C-_> :nohl<CR>
+
+nnoremap <F12> :call ToggleColumns()<CR>
+if has("patch-8.1.1564") || has('nvim')
+	set signcolumn=number
+else
+	function! ToggleColumns()
+		if &signcolumn == 'no'
+			set signcolumn=yes
+		else
+			set signcolumn=no
+		endif
+	endfunction
+endif
+
+" Misc.
+set updatetime=60
+
+" Default language settings
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+" Language specific options
+autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd Filetype javascriptreact setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd Filetype typescriptreact setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd Filetype typescript setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd Filetype java setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd Filetype terraform setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd Filetype hcl setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+
+" Disable mouse
+set mouse=
+
+" Some LaTeX thing
+let g:Imap_FreezeImap=1
