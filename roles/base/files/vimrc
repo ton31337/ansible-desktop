@@ -44,6 +44,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
 Plug 'preservim/nerdtree'
 Plug 'Yggdroot/indentLine'
+Plug 'vim-crystal/vim-crystal'
 call plug#end()
 
 let g:lightline = {
