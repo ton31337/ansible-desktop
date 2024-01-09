@@ -131,3 +131,8 @@
   copy:
     src: settings.json
     dest: ~/.config/Code/User/settings.json
+
+- name: Copy .irssi/config
+  copy:
+    src: irssi/config
+    dest: ~/.irssi/config
