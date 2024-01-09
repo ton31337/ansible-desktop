@@ -1,4 +1,5 @@
 set nocompatible
+set noexpandtab
 set wrap linebreak nolist
 set formatoptions+=t
 set ruler
@@ -45,6 +46,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'preservim/nerdtree'
 Plug 'Yggdroot/indentLine'
 Plug 'vim-crystal/vim-crystal'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 let g:lightline = {
