@@ -1,4 +1,5 @@
 set nocompatible
+set noswapfile
 set noexpandtab
 set wrap linebreak nolist
 set formatoptions+=t
