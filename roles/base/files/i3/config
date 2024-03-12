@@ -198,6 +198,8 @@ bar {
 }
 
 # Lock
+# If using with TOTP/etc. (= JumpCloud), make sure you have proper rules for PAM
+# /etc/pam.d/i3lock.
 bindsym $mod+Delete exec "i3lock -c 000000"
 
 # Startup stuff
