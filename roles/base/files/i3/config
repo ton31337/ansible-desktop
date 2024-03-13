@@ -26,6 +26,9 @@ font pango:Iosevka Aile 9
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
+# Autolock after 5 minutes of incactivity
+exec_always xautolock -time 5 -locker "i3lock -c 000000"
+
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
