@@ -26,6 +26,10 @@ font pango:Iosevka Aile 9
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
+# Languages
+exec --no-startup-id setxkbmap -layout us,lt
+exec --no-startup-id setxkbmap -option 'grp:alt_space_toggle'
+
 # Autolock after 5 minutes of incactivity
 exec_always xautolock -time 5 -locker "i3lock -c 000000"
 
