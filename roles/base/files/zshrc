@@ -91,3 +91,5 @@ PS1="\$vcs_info_msg_0_$PS1"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+[ -f ~/.ssh/agent.env ] && source ~/.ssh/agent.env

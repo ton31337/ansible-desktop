@@ -34,6 +34,9 @@ exec --no-startup-id setxkbmap -option 'grp:alt_space_toggle'
 # Autolock after 5 minutes of incactivity
 exec_always xautolock -time 5 -locker "i3lock -c 000000"
 
+# ssh-agent
+exec_always ~/.config/i3/bin/gnome-keyring.sh
+
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
