@@ -19,7 +19,7 @@ set vb
 set wildmenu
 set number
 set paste
-set textwidth=80
+set textwidth=100
 set encoding=utf-8
 set shiftwidth=4
 set softtabstop=4
