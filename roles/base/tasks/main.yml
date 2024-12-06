@@ -10,7 +10,6 @@
   - neovim-qt
   - i3
   - guake
-  - python-pip
   - zsh
   - git
   - vim
@@ -42,7 +41,6 @@
   - pwgen
   - whois
   - traceroute
-  - python-netaddr
   - nghttp2-client
   - golang-go
   - golang-golang-x-tools
@@ -50,15 +48,13 @@
   - pavucontrol
   - minicom
   - xinetd
-  - tftp
-  - tftpd
   - gimp
   - graphviz
   - tig
   - pv
   - icedtea-netx
   - tilix
-  - clang-format-3.9
+  - clang-format-18
   - xml2rfc
   - devscripts
   - virtualbox
