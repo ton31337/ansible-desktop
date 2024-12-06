@@ -76,10 +76,6 @@
   snap:
     name: remmina
 
-- name: Install shodan cli
-  pip:
-    name: shodan
-
 - name: Change default shell
   user:
     name: donatas
