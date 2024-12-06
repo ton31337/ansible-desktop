@@ -72,11 +72,6 @@
     name: slack
     classic: yes
 
-- name: Install skype
-  snap:
-    name: skype
-    classic: yes
-
 - name: Install Remmina RDP client
   snap:
     name: remmina
