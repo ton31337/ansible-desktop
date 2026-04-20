@@ -220,5 +220,4 @@ assign [class="Slack"] $ws3
 assign [class="discord"] $ws3
 assign [class="Code"] $ws4
 assign [class="gvim"] $ws4
-assign [class="csgo_linux64"] $ws6
-exec --no-startup-id i3-msg "exec tilix; exec firefox; exec slack; exec discord; exec gvim;"
+exec --no-startup-id i3-msg "exec tilix; exec firefox;"
