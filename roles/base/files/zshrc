@@ -1,6 +1,6 @@
 HISTFILE=~/.histfile
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=1000000000
+SAVEHIST=1000000000
 setopt appendhistory
 setopt extendedhistory
 setopt print_exit_value
@@ -47,7 +47,6 @@ setopt auto_pushd
 DIRSTACKSIZE=50
 
 alias ping='ping -n '
-alias ansible-knife='ruby ~/hostinger/ansible-repo/ansible_search.rb -i ~/hostinger/ansible-repo/hosts'
 
 PS1="%B[%T]%b %U%M%u %n %d
 %# "
@@ -92,4 +91,18 @@ PS1="\$vcs_info_msg_0_$PS1"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+export VAULT_AUTH_METHOD=token
+export VAULT_ADDR=
+export VAULT_TOKEN=
+export ANSIBLE_STRATEGY=mitogen_linear
+export ANSIBLE_STRATEGY_PLUGINS=/usr/lib/python3/dist-packages/ansible_mitogen/plugins/strategy
+
 [ -f ~/.ssh/agent.env ] && source ~/.ssh/agent.env
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+. "$HOME/.local/bin/env"
