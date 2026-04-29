@@ -91,9 +91,13 @@ PS1="\$vcs_info_msg_0_$PS1"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+VAULT_TOKEN_FILE="$HOME/.vault-token"
+if [[ ! -f "$VAULT_TOKEN_FILE" ]] || (( $(date +%s) - $(stat -c %Y "$VAULT_TOKEN_FILE") > 21600 )); then
+    vault login -address=https://FIXME -field=token -method=oidc role=google
+fi
+export VAULT_TOKEN=$(cat "$VAULT_TOKEN_FILE")
 export VAULT_AUTH_METHOD=token
-export VAULT_ADDR=
-export VAULT_TOKEN=
+export VAULT_ADDR=https://FIXME
 export ANSIBLE_STRATEGY=mitogen_linear
 export ANSIBLE_STRATEGY_PLUGINS=/usr/lib/python3/dist-packages/ansible_mitogen/plugins/strategy
 
